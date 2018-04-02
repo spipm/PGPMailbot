@@ -21,4 +21,4 @@ Note that you have to create a config file and point to it in *pgpmailbot.py*. A
 ##### Things #####
 
 * Currently anyone can send a random public certificate and it will be imported.
-* Directory permissions suck because postfix uses different users to invoke handle the script.
+* Directory permissions are kind of hassle. (Postfix seems to invoke the user *nobody* to run the script. This user will create gpg key store and log file).
