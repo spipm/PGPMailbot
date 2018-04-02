@@ -16,9 +16,6 @@ if mail_text == False:
 		log_message(config, "No email text")
 	exit(0)
 
-if config['debug']:
-	log_message(config, mail_text)
-
 # check if mail is meant for the bot
 is_meant_for_me(mail_text, config)
 

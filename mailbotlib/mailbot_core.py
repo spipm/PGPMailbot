@@ -4,10 +4,12 @@ import mailbotlib.gpg_happytime as gpgfun
 from mailbotlib.mailbot_messages import *
 import mailbotlib.mailbot_sendmail as mailbotreply
 
+from time import gmtime, strftime
+
 
 def log_message(config, message):
 	with open(config['log_file'],'a') as fout:
-		fout.write(message+"\n")
+		fout.write("%s %s\n" % (strftime("%Y-%m-%d %H:%M", gmtime()), message))
 
 
 def init_gpg(botAddress, gpgHomeDir):
@@ -51,6 +53,9 @@ def process_message(mail_text, config):
 
 	# get from address
 	fromAddress = mailObject.get("From")
+
+	if config['debug']:
+		log_message(config, "Mail from: %s, size: %s" % (fromAddress, len(mail_text)))
 
 	# 'load' mail template
 	emailResponseTemplate = MAILBOT_BASICMAIL
