@@ -5,7 +5,7 @@ from mailbotlib.mailbot_core import *
 
 # init
 config = parse_config_file(filename="/home/postfix-scripts/pgpmailbot/config/pgpmailbot.conf")
-init_gpg(config['bot_address'], "/home/postfix-scripts/pgpmailbot/")
+init_gpg(config['bot_address'], config['gpg_dir'])
 
 # get mail text
 #mail_text = get_mail_from_imap(config['imap_username'], config['imap_password'], config['imap_server'], removeMsg=False)
