@@ -30,17 +30,17 @@ Note that you have to create a config file and point to it in *pgpmailbot.py*. A
 
 Bot currently runs on graa.nl. A normal email will trigger a response with a public key and the request to encrypt: 
 
-![Initial bot response](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/initial-mail.png "Initial mail")
+<kbd>![Initial bot response](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/initial-mail.png "Initial mail")</kbd>
 
 Once you succesfully imported the bot's public key, you can send it an encrypted email. Once you've done that, it'll continue with the next step, which is sending your public key. You can send it encrypted or unencrypted.
 
-![Encryption success, public key request](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/step2-encrypted.png "Encryption success, public key request")
+<kbd>![Encryption success, public key request](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/step2-encrypted.png "Encryption success, public key request")</kbd>
 
 If the bot succesfully imported your key, it'll start encrypting and signing mails to you. Last request is to sign your email.
 
-![Bot imported key, request sign](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/step3-sharepubkey.png "Bot imported key, request sign")
+<kbd>![Bot imported key, request sign](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/step3-sharepubkey.png "Bot imported key, request sign")</kbd>
 
 As a final step, you can encrypt and sign your email. The bot will reply with an encrypted and signed email. Everything works!
 
-![Encrypted and signed both ways](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/final-worked.png "Encrypted and signed both ways")
+<kbd>![Encrypted and signed both ways](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/final-worked.png "Encrypted and signed both ways")</kbd>
 
