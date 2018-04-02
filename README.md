@@ -34,7 +34,7 @@ A normal email will trigger a response with a public key and the request to encr
 
 <kbd>![Initial bot response](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/initial-mail.png "Initial mail")</kbd>
 
-Once you succesfully imported the bot's public key, you can send it an encrypted email. Once you've done that, it'll continue with the next step, which is sending your public key. You can send it encrypted or unencrypted.
+Once you succesfully imported the bot's public key, you can send it an encrypted email. Once you've done that, it'll continue with the next step, which is sending your public key (in an encrypted mail).
 
 <kbd>![Encryption success, public key request](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/step2-encrypted.png "Encryption success, public key request")</kbd>
 
