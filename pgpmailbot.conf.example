@@ -1,0 +1,7 @@
+imap_username=foo@bar
+imap_password=pwdHere
+imap_server=someMailServer
+bot_address=BotMailAddress
+log_file=PathForLoggin
+debug=False
+gpg_dir=PathToGPGDir
