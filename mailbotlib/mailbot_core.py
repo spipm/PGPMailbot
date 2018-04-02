@@ -13,6 +13,7 @@ def log_message(config, message):
 def init_gpg(botAddress, gpgHomeDir):
 	gpgfun.init_gpgfun(gpgHomeDir)	
 	gpgfun.check_bot_keys(botAddress)
+	gpgfun.clear_max_keys(1024, botAddress)
 
 
 def is_meant_for_me(mail_text, config):

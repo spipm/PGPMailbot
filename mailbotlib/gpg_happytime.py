@@ -8,6 +8,15 @@ def init_gpgfun(gpgHomeDir):
 	gpg = gnupg.GPG(gnupghome=gpgHomeDir)
 
 
+def clear_max_keys(maxKeys, botAddress):
+	''' Clear gpg key store (except for bot address) if max number of keys are stored '''
+	if len(gpg.list_keys()) > maxKeys:
+		for pub in gpg.list_keys():
+			for uid in pub['uids']:
+				if botAddress not in uid:
+					gpg.delete_keys(pub['fingerprint'])
+
+
 def has_pubkey_for(address):
 	keyID = False
 

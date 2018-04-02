@@ -9,6 +9,7 @@ I am email bot to help you set up PGP public key encryption for your email.
 
 With kind regards,
 Mailbot
+graa.nl
 '''
 
 MAILBOT_STARTMESSAGE = '''
