@@ -22,3 +22,13 @@ Note that you have to create a config file and point to it in *pgpmailbot.py*. A
 
 * Currently anyone can send a random public certificate and it will be imported.
 * Directory permissions are kind of hassle. (Postfix seems to invoke the user *nobody* to run the script. This user will create gpg key store and log file).
+* Exceptions are not yet handled.
+* Debug logging only logs the email message.
+
+##### Working example #####
+
+Bot currently runs on graa.nl. 
+
+
+
+
