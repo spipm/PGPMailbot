@@ -1,6 +1,6 @@
 #### PGP Mail Bot ####
 
-This is a mail bot to learn about:
+I created this application to learn about:
 * Setting up Postfix to automatically handle email.
 * Using PGP in email (MIME) with Python.
 * Sending and receiving email with Python.
@@ -20,15 +20,17 @@ Note that you have to create a config file and point to it in *pgpmailbot.py*. A
 
 ##### Things #####
 
-* Currently anyone can send a random public certificate and it will be imported.
-* Directory permissions are kind of hassle. (Postfix seems to invoke the user *nobody* to run the script. This user will create gpg key store and log file).
+* Currently anyone can send a random public key and it will be imported.
+* Directory permissions are kind of a hassle. (Postfix seems to invoke the user *nobody* to run the script. This user will create a gpg key store and a log file).
 * Exceptions are not yet handled.
 * Debug logging only logs the email message.
 * Does not handle in-line PGP, trust levels, key-server validation or other types or encryption like S/MIME.
 
-##### Working example #####
+#### Working example ####
 
-Bot currently runs on graa.nl. A normal email will trigger a response with a public key and the request to encrypt: 
+Bot currently runs on graa.nl. The examples below show its usage with Thunderbird and Enigmail.
+
+A normal email will trigger a response with a public key and the request to encrypt: 
 
 <kbd>![Initial bot response](https://raw.githubusercontent.com/DutchGraa/PGPMailbot/master/docs/initial-mail.png "Initial mail")</kbd>
 

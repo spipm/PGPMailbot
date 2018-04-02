@@ -1,6 +1,6 @@
 MAILBOT_BASICMAIL = '''Hi,
 
-I am email bot to help you set up PGP public key encryption for your email. 
+I'm an email bot to help you set up PGP public key encryption for your email. 
 
 [EMAIL_IS_ENCRYPTED]
 
@@ -8,6 +8,7 @@ I am email bot to help you set up PGP public key encryption for your email.
 
 
 With kind regards,
+
 Mailbot
 graa.nl
 '''
