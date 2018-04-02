@@ -5,7 +5,13 @@ from mailbotlib.mailbot_messages import *
 import mailbotlib.mailbot_sendmail as mailbotreply
 
 
-def init_gpg(botAddress):
+def log_message(config, message):
+	with open(config['log_file'],'a') as fout:
+		fout.write(message+"\n")
+
+
+def init_gpg(botAddress, gpgHomeDir):
+	gpgfun.init_gpgfun(gpgHomeDir)	
 	gpgfun.check_bot_keys(botAddress)
 
 

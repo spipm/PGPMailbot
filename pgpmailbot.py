@@ -4,19 +4,23 @@ from mailbotlib.mailbot_core import *
 
 
 # init
-config = parse_config_file()
-init_gpg(config['bot_address'])
+config = parse_config_file(filename="/home/postfix-scripts/pgpmailbot/config/pgpmailbot.conf")
+init_gpg(config['bot_address'], "/home/postfix-scripts/pgpmailbot/")
 
 # get mail text
-mail_text = get_mail_from_imap(config['imap_username'], config['imap_password'], config['imap_server'], removeMsg=False)
+#mail_text = get_mail_from_imap(config['imap_username'], config['imap_password'], config['imap_server'], removeMsg=False)
+mail_text = get_mail_from_stdin()
 
-# print mail_text
 if mail_text == False:
-	print "No email text"
+	if config['debug']:
+		log_message(config, "No email text")
 	exit(0)
 
+if config['debug']:
+	log_message(config, mail_text)
+
+# check if mail is meant for the bot
 is_meant_for_me(mail_text, config)
 
+# process the email message
 process_message(mail_text, config)
-
-

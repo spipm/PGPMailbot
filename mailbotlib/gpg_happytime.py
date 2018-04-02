@@ -1,6 +1,11 @@
 import gnupg
 
-gpg = gnupg.GPG(gnupghome='.')
+gpg = None
+
+
+def init_gpgfun(gpgHomeDir):
+	global gpg
+	gpg = gnupg.GPG(gnupghome=gpgHomeDir)
 
 
 def has_pubkey_for(address):

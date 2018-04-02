@@ -1,5 +1,5 @@
 import imaplib
-
+import sys
 
 def get_mail_from_imap(username, password, server, port=993, secureTLS=True, removeMsg=True):
 	'''
