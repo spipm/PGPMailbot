@@ -28,7 +28,7 @@ Note that you have to create a config file and point to it in *pgpmailbot.py*. A
 
 #### Working example ####
 
-Bot currently runs on graa.nl. The examples below show its usage with Thunderbird and Enigmail.
+The examples below show its usage with Thunderbird and Enigmail.
 
 A normal email will trigger a response with a public key and the request to encrypt: 
 
